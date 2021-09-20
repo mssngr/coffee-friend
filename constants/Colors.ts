@@ -1,19 +1,27 @@
-const tintColorLight = '#2f95dc';
-const tintColorDark = '#fff';
+const white = '#fff'
+const lightGray = '#c3c3c3'
+const gray = 'hsl(0, 0%, 50%)'
+const darkGray = '#3c3c3c'
+const black = '#000'
+
+const tintColor = black
+const accentColor = white
 
 export default {
-  light: {
-    text: '#000',
-    background: '#fff',
-    tint: tintColorLight,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#fff',
-    background: '#000',
-    tint: tintColorDark,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorDark,
-  },
-};
+  tintColor,
+  accentColor,
+  tabIconDefault: accentColor,
+  tabIconSelected: tintColor,
+  tabBar: '#fefefe',
+  errorBackground: 'red',
+  errorText: '#fff',
+  warningBackground: '#EAEB5E',
+  warningText: '#666804',
+  noticeBackground: tintColor,
+  noticeText: '#fff',
+  white,
+  lightGray,
+  gray,
+  darkGray,
+  black,
+}
