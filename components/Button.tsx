@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { TouchableOpacity } from 'react-native'
 import styled from 'styled-components/native'
-
 import Colors from '../constants/Colors'
 import { Text, StrongText } from './styled'
 
@@ -17,12 +16,16 @@ const StyledButton = styled.TouchableOpacity`
 `
 
 const OutlineButton = styled(StyledButton)`
-  background-color: transparent;
+  background-color: ${Colors.white};
   border: 2px solid ${Colors.black};
 `
 
 const WhiteText = styled(StrongText)`
-  color: white;
+  color: ${Colors.white};
+`
+
+const DarkText = styled(StrongText)`
+  color: ${Colors.black};
 `
 
 class Button extends React.Component<any> {
@@ -38,11 +41,11 @@ class Button extends React.Component<any> {
     let ButtonText = WhiteText
     if (link) {
       Touchable = TouchableOpacity as any
-      ButtonText = Text
+      ButtonText = DarkText
     }
     if (outline) {
       Touchable = OutlineButton
-      ButtonText = Text
+      ButtonText = DarkText
     }
 
     return (

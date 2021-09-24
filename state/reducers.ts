@@ -56,7 +56,7 @@ const currentInitState = {
   methodId: settingsInitState.methods.pourOver.id,
 }
 
-const current = (state = currentInitState, action: any) => {
+const current = (state: any = currentInitState, action: any) => {
   switch (action.type) {
     case ActionTypes.CHANGE_SIZE:
       return { ...state, sizeId: action.payload.newSize || state.size }

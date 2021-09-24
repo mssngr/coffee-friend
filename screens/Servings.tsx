@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styled from 'styled-components/native'
 // import { get } from 'lodash'
-import figure1 from '../assets/images/figure1.png'
-import figure2 from '../assets/images/figure2.png'
-import figure3 from '../assets/images/figure3.png'
-import figure4 from '../assets/images/figure4.png'
+import Person1 from '../components/icons/Person1'
+import Person2 from '../components/icons/Person2'
+import Person3 from '../components/icons/Person3'
+import Person4 from '../components/icons/Person4'
 import plus from '../assets/images/plus.png'
 import minus from '../assets/images/minus.png'
 import { convertNumToText } from '../utils/functions'
@@ -55,7 +55,7 @@ const FiguresContainer = styled(FlexContainer)`
   width: 60%;
 `
 
-const FigureImage = styled.Image`
+const PersonImage = styled.Image`
   width: 40px;
   height: 120px;
 `
@@ -140,11 +140,13 @@ class Servings extends React.Component<any> {
 
   render() {
     const { navigation, servings } = this.props
-    console.log(servings)
     return (
       <Screen
-        header="Choose your servings"
-        otherButton={{ screen: 'Cafes', text: 'Feeling Lazy' }}
+        header="How many people?"
+        otherButton={{
+          url: 'https://thankfulfriend.coffee',
+          text: 'Out of Coffee?',
+        }}
         next={{ screen: 'Size', text: 'Continue' }}
         navigation={navigation}
       >
@@ -155,10 +157,10 @@ class Servings extends React.Component<any> {
               <OperatorImage source={minus as any} />
             </Button>
             <FiguresContainer>
-              {servings >= 1 && <FigureImage source={figure1 as any} />}
-              {servings >= 2 && <FigureImage source={figure2 as any} />}
-              {servings >= 3 && <FigureImage source={figure3 as any} />}
-              {servings >= 4 && <FigureImage source={figure4 as any} />}
+              {servings === 1 && <Person1 height="240px" width="240px" />}
+              {servings === 2 && <Person2 height="240px" width="240px" />}
+              {servings === 3 && <Person3 height="240px" width="240px" />}
+              {servings === 4 && <Person4 height="240px" width="240px" />}
             </FiguresContainer>
             <Button onPress={this.handleIncrementServings}>
               <OperatorImage source={plus as any} />

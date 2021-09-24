@@ -20,7 +20,7 @@ const SlideContainer = styled.View`
 `
 
 const SlideImage = styled.Image`
-  margin-vertical: 15px;
+  margin: 15px 0;
   height: 150px;
 `
 

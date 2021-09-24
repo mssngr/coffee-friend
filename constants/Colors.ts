@@ -1,27 +1,27 @@
-const white = '#fff'
-const lightGray = '#c3c3c3'
-const gray = 'hsl(0, 0%, 50%)'
-const darkGray = '#3c3c3c'
-const black = '#000'
-
+const white = '#f9f9fa'
+const black = '#010101'
+const lightBlue = '#3ec4e1'
+const blue = '#0b4d6e'
+const red = '#ed3c29'
+const cream = '#f3e8c7'
+const yellow = '#fec365'
 const tintColor = black
 const accentColor = white
 
 export default {
   tintColor,
   accentColor,
-  tabIconDefault: accentColor,
-  tabIconSelected: tintColor,
-  tabBar: '#fefefe',
-  errorBackground: 'red',
-  errorText: '#fff',
+  errorBackground: red,
+  errorText: white,
   warningBackground: '#EAEB5E',
   warningText: '#666804',
   noticeBackground: tintColor,
-  noticeText: '#fff',
+  noticeText: white,
   white,
-  lightGray,
-  gray,
-  darkGray,
+  lightBlue,
+  blue,
+  red,
+  cream,
+  yellow,
   black,
 }

@@ -30,7 +30,7 @@ const Container = styled.View`
 `
 
 const MeasurementsText = styled(Text)`
-  color: ${Colors.darkGray};
+  color: ${Colors.black};
 `
 
 const ImageContainer = styled.View`
@@ -111,6 +111,10 @@ class Instructions extends React.Component<any> {
       <Screen
         header="Brew your cup!"
         navigation={navigation}
+        otherButton={{
+          url: 'https://thankfulfriend.coffee',
+          text: 'Out of Coffee?',
+        }}
         // otherButton={{
         //   isNotOutline: isSaved,
         //   onPress: this.handleAddFavorites,

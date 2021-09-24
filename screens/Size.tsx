@@ -20,11 +20,11 @@ const SlideContainer = styled.View`
 `
 
 const SlideText = styled(Text)`
-  color: ${Colors.darkGray};
+  color: ${Colors.black};
 `
 
 const SlideImage = styled.Image`
-  margin-vertical: 15px;
+  margin: 15px 0;
   height: 150px;
 `
 
@@ -107,7 +107,7 @@ class Size extends React.Component<any> {
     const { navigation, sizes } = this.props
     return (
       <Screen
-        header="Choose your size"
+        header="How much coffee?"
         next={{ screen: 'Method', text: 'Choose this size' }}
         navigation={navigation}
         hasBack

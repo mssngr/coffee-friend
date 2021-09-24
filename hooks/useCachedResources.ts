@@ -15,9 +15,11 @@ export default function useCachedResources() {
         // Load fonts
         await Font.loadAsync({
           ...FontAwesome.font,
-          'gamja-flower': require('../assets/fonts/GamjaFlower-Regular.ttf'),
-          'gaegu-bold': require('../assets/fonts/Gaegu-Bold.ttf'),
-          'caveat-bold': require('../assets/fonts/Caveat-Bold.ttf'),
+          'greycliff-bold': require('../assets/fonts/GreycliffCF-Bold.otf'),
+          'greycliff-demibold': require('../assets/fonts/GreycliffCF-DemiBold.otf'),
+          'greycliff-light': require('../assets/fonts/GreycliffCF-Light.otf'),
+          'greycliff-medium': require('../assets/fonts/GreycliffCF-Medium.otf'),
+          'greycliff-regular': require('../assets/fonts/GreycliffCF-Regular.otf'),
         })
       } catch (e) {
         // We might want to provide this error information to an error reporting service

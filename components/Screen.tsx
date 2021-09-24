@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components/native'
-import caret from '../assets/images/caret-darkGray.png'
+import { openURL } from 'expo-linking'
+import caret from '../assets/images/caret.png'
 import Colors from '../constants/Colors'
 import { Header, Text } from '../components/styled'
 import Button from '../components/Button'
@@ -15,7 +16,7 @@ const ScreenContainer = styled.View`
   justify-content: space-between;
   align-items: center;
   padding: 45px 0;
-  background-color: ${Colors.lightGray};
+  background-color: ${Colors.yellow};
 `
 
 const Caret = styled.Image`
@@ -36,7 +37,7 @@ const BackButton = styled.TouchableOpacity`
 `
 
 const BackText = styled(Text)`
-  color: ${Colors.darkGray};
+  color: ${Colors.black};
 `
 
 const ButtonsContainer = styled.View`
@@ -86,6 +87,9 @@ class Screen extends React.Component<any> {
     }
     if (next.screen) {
       this.props.navigation.navigate(next.screen)
+    }
+    if (next.url) {
+      openURL(next.url)
     }
   }
 
